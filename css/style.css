@@ -66,6 +66,7 @@ section {
   h1 {
     font-size: 48px;
   }
+
   h2,
   h3,
   h5 {
@@ -77,6 +78,7 @@ section {
   h1 {
     font-size: 32px;
   }
+
   h2 {
     font-size: 16px;
   }
@@ -116,15 +118,29 @@ section {
   margin-left: 20px;
 }
 
-.input-group > .form-control {
+.btn-form-submit:hover {
+  background: #F2DA56;
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+  border-radius: 6px;
+
+}
+
+.btn-form-submit:active {
+  background: #F6BC25;
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+  border-radius: 6px;
+}
+
+
+.input-group>.form-control {
   height: 70px;
   background: #FFF;
-  box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
+  box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
   border-radius: 3px !important;
   font-size: 22px;
 }
 
-.input-group.error > .form-control {
+.input-group.error>.form-control {
   border: 3px solid #DC0015;
   border-radius: 3px 3px 0 0 !important;
 }
@@ -164,13 +180,16 @@ section {
   .input-group {
     flex-direction: column;
   }
-  .input-group > .form-control,
+
+  .input-group>.form-control,
   .btn-form-submit {
     width: 100%;
   }
-  .input-group > .form-control {
+
+  .input-group>.form-control {
     height: 50px;
   }
+
   .btn-form-submit {
     margin: 12px 0 0 0;
   }
@@ -194,7 +213,7 @@ section {
 
 /* ************************************************************
 ***************************************************************
---- [SECTION] Features ---
+--- [SECTION] Features Desktop ---
 ***************************************************************
 ************************************************************ */
 
@@ -234,18 +253,22 @@ section {
 }
 
 @media(min-width: 768px) {
-  .featuresMobile{
+  .featuresMobile {
     display: none;
   }
+
   .features .headline {
     margin-bottom: 28px;
   }
+
   .features h2 {
     line-height: 28px;
   }
+
   .list-item {
     margin-bottom: 20px;
   }
+
   .list-circle {
     width: 63px;
     height: 63px;
@@ -253,22 +276,26 @@ section {
     flex: 0 0 63px;
     font-size: 33.6px;
   }
+
   .list-text p {
     line-height: 24px;
   }
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) {
 
-  .featuresMobile{
+  .featuresMobile {
     display: none;
   }
+
   .features .headline {
     margin-bottom: 20px;
   }
+
   .list-item {
     margin-bottom: 16px;
   }
+
   .list-circle {
     width: 50.4px;
     height: 50.4px;
@@ -278,6 +305,13 @@ section {
     margin-right: 10.6px;
   }
 }
+
+
+/* ************************************************************
+***************************************************************
+--- [SECTION] Features Mobile ---
+***************************************************************
+************************************************************ */
 
 .featuresMobile {
   background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
@@ -314,28 +348,29 @@ section {
   line-height: 26px;
 }
 
-/*Mobile*/
+
 
 @media(max-width: 767px) {
-  .features{
+  .features {
     display: none;
   }
+
   .featuresMobile {
     background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
   }
-  
+
   .featuresMobile .headline {
     margin-bottom: 40px;
   }
-  
+
   .featuresMobile h2 {
     line-height: 30px;
   }
-  
+
   .list-item {
     margin-bottom: 28px;
   }
-  
+
   .list-circle {
     border-radius: 50%;
     width: 90px;
@@ -349,25 +384,29 @@ section {
     flex: 0 0 90px;
     margin-right: 20px;
   }
-  
+
   .list-text p {
     margin: 0;
     line-height: 26px;
   }
-  
-  @media(max-width: 767px){
-    .features{
+
+  @media(max-width: 767px) {
+    .features {
       display: none;
     }
+
     .featuresMobile .headline {
       margin-bottom: 28px;
     }
+
     .featuresMobile h2 {
       line-height: 28px;
     }
+
     .list-item {
       margin-bottom: 20px;
     }
+
     .list-circle {
       width: 63px;
       height: 63px;
@@ -375,21 +414,25 @@ section {
       flex: 0 0 63px;
       font-size: 33.6px;
     }
+
     .list-text p {
       line-height: 24px;
     }
   }
-  
+
   @media(max-width: 767px) {
-    .features{
+    .features {
       display: none;
     }
+
     .featuresMobile .headline {
       margin-bottom: 20px;
     }
+
     .list-item {
       margin-bottom: 16px;
     }
+
     .list-circle {
       width: 50.4px;
       height: 50.4px;
@@ -423,7 +466,7 @@ section {
 .result-card {
   max-width: 980px;
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
   border-radius: 30px;
   padding: 40px;
   margin: 40px auto;
@@ -448,12 +491,14 @@ section {
   .result {
     min-height: 512px;
   }
+
   .result-avatar {
     width: 63px;
     height: 63px;
     line-height: 58px;
     flex: 0 0 63px;
   }
+
   .result-avatar img {
     width: 28px;
   }
@@ -463,6 +508,7 @@ section {
   .result {
     min-height: 306px;
   }
+
   .result-avatar {
     display: none;
   }
