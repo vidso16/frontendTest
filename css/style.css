@@ -233,7 +233,10 @@ section {
   line-height: 26px;
 }
 
-@media (max-width: 991px) {
+@media(min-width: 768px) {
+  .featuresMobile{
+    display: none;
+  }
   .features .headline {
     margin-bottom: 28px;
   }
@@ -255,7 +258,11 @@ section {
   }
 }
 
-@media (max-width: 767px) {
+@media(min-width: 768px){
+
+  .featuresMobile{
+    display: none;
+  }
   .features .headline {
     margin-bottom: 20px;
   }
@@ -271,6 +278,129 @@ section {
     margin-right: 10.6px;
   }
 }
+
+.featuresMobile {
+  background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+}
+
+.featuresMobile .headline {
+  margin-bottom: 40px;
+}
+
+.featuresMobile h2 {
+  line-height: 30px;
+}
+
+.list-item {
+  margin-bottom: 28px;
+}
+
+.list-circle {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  background: #004A80;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #F6BC25;
+  flex: 0 0 90px;
+  margin-right: 20px;
+}
+
+.list-text p {
+  margin: 0;
+  line-height: 26px;
+}
+
+/*Mobile*/
+
+@media(max-width: 767px) {
+  .features{
+    display: none;
+  }
+  .featuresMobile {
+    background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+  }
+  
+  .featuresMobile .headline {
+    margin-bottom: 40px;
+  }
+  
+  .featuresMobile h2 {
+    line-height: 30px;
+  }
+  
+  .list-item {
+    margin-bottom: 28px;
+  }
+  
+  .list-circle {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    background: #004A80;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #F6BC25;
+    flex: 0 0 90px;
+    margin-right: 20px;
+  }
+  
+  .list-text p {
+    margin: 0;
+    line-height: 26px;
+  }
+  
+  @media(max-width: 767px){
+    .features{
+      display: none;
+    }
+    .featuresMobile .headline {
+      margin-bottom: 28px;
+    }
+    .featuresMobile h2 {
+      line-height: 28px;
+    }
+    .list-item {
+      margin-bottom: 20px;
+    }
+    .list-circle {
+      width: 63px;
+      height: 63px;
+      line-height: 63px;
+      flex: 0 0 63px;
+      font-size: 33.6px;
+    }
+    .list-text p {
+      line-height: 24px;
+    }
+  }
+  
+  @media(max-width: 767px) {
+    .features{
+      display: none;
+    }
+    .featuresMobile .headline {
+      margin-bottom: 20px;
+    }
+    .list-item {
+      margin-bottom: 16px;
+    }
+    .list-circle {
+      width: 50.4px;
+      height: 50.4px;
+      line-height: 50.4px;
+      flex: 0 0 50.4px;
+      font-size: 26.88px;
+      margin-right: 10.6px;
+    }
+  }
+}
+
 
 /* ************************************************************
 ***************************************************************
