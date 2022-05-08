@@ -191,8 +191,32 @@ section {
   }
 
   .btn-form-submit {
-    margin: 12px 0 0 0;
+    margin: 10px 0 0 0;
+
+
   }
+
+  .input-group.error .error-msg {
+    position: relative;
+    bottom: 5px;
+    width: 100%;
+    margin: 0px;
+    padding: 4px 12px;
+    background: #DC0015;
+    color: #FFF;
+    border-radius: 0 0 3px 3px;
+    font-size: 14px;
+
+  }
+
+  .btn-form-submit:active {
+    background: #F6BC25;
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border-radius: 6px;
+  }
+
+
+
 }
 
 /* ************************************************************
@@ -202,18 +226,18 @@ section {
 ************************************************************ */
 
 
-.load{
+.load {
   background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
   padding-top: 0%;
   padding-bottom: 0%;
 }
 
 
-#loader  {
+#loader {
   filter: brightness(1.1);
   mix-blend-mode: multiply;
   display: block;
-  margin: 0px auto;  
+  margin: 0px auto;
   margin-top: 343px;
   margin-bottom: 399px;
   width: 154px;
@@ -231,7 +255,7 @@ section {
   color: #004A80;
   letter-spacing: 0;
   text-align: center;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 #loaderFoot {
@@ -261,8 +285,6 @@ section {
   padding-left: 5px;
 }
 
-
-
 /* Add animation to "page content" */
 .animate-bottom {
   position: relative;
@@ -271,7 +293,6 @@ section {
   animation-name: animatebottom;
   animation-duration: 1s
 }
-
 
 #myDiv {
   display: none;
@@ -529,7 +550,6 @@ section {
     }
   }
 }
-
 
 /* ************************************************************
 ***************************************************************
