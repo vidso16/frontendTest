@@ -105,6 +105,8 @@ section {
 ************************************************************ */
 
 .btn-form-submit {
+  display: inline;
+  max-width: 992px;
   font-size: 24px;
   font-weight: bold;
   color: #004A80;
@@ -115,6 +117,7 @@ section {
   appearance: none;
   -webkit-appearance: none;
   width: 180px;
+  height: 70px;
   margin-left: 20px;
 }
 
@@ -131,8 +134,18 @@ section {
   border-radius: 6px;
 }
 
+.input-group.error>.form-email {
+  border: 3px solid #DC0015;
+  border-radius: 3px 3px 0 0 !important;
+}
 
-.input-group>.form-control {
+.input-group.error>.form-phone {
+  border: 3px solid #DC0015;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+.input-group>.form-email {
+  width: 80%;
   height: 70px;
   background: #FFF;
   box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
@@ -140,16 +153,24 @@ section {
   font-size: 22px;
 }
 
-.input-group.error>.form-control {
-  border: 3px solid #DC0015;
-  border-radius: 3px 3px 0 0 !important;
+.input-group>.form-phone {
+  width: 80%;
+  height: 70px;
+  background: #FFF;
+  box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
+  border-radius: 3px !important;
+  font-size: 22px;
 }
 
-.error-msg {
+.errorEmail {
   display: none;
 }
 
-.input-group.error .error-msg {
+.errorPhone {
+  display: none;
+}
+
+.input-group.error .errorEmail {
   display: block;
   position: absolute;
   bottom: -30px;
@@ -161,7 +182,28 @@ section {
   font-size: 16px;
 }
 
-.form-control::placeholder {
+.input-group.error .errorPhone {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  margin: 0px;
+  padding: 4px 12px;
+  background: #DC0015;
+  color: #FFF;
+  border-radius: 0 0 3px 3px;
+  font-size: 16px;
+}
+
+.form-email::placeholder {
+  width: 100%;
+  color: #9B9B9B;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-phone::placeholder {
   color: #9B9B9B;
   font-size: 16px;
   font-weight: bold;
@@ -170,43 +212,74 @@ section {
 }
 
 .form-subtext {
+  display: inline;
   font-size: 16px;
   color: #FFF;
-  margin: 0 0 0 15px;
+  margin-right: 45px;
   line-height: normal;
 }
+
+.lock {
+  display: inline;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+
+
 
 @media (max-width: 767px) {
   .input-group {
     flex-direction: column;
   }
 
-  .input-group>.form-control,
+  .input-group>.form-email,
   .btn-form-submit {
     width: 100%;
   }
 
-  .input-group>.form-control {
+  .input-group>.form-email {
+    height: 50px;
+  }
+
+  .input-group>.form-phone,
+  .btn-form-submit {
+    width: 100%;
+  }
+
+  .input-group>.form-phone {
     height: 50px;
   }
 
   .btn-form-submit {
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
 
 
   }
 
-  .input-group.error .error-msg {
+  .input-group.error .errorEmail {
+    display: block;
     position: relative;
     bottom: 5px;
     width: 100%;
-    margin: 0px;
     padding: 4px 12px;
     background: #DC0015;
     color: #FFF;
     border-radius: 0 0 3px 3px;
     font-size: 14px;
+  }
 
+  .input-group.error .errorPhone {
+    display: none;
+    position: relative;
+    bottom: 5px;
+    width: 100%;
+    padding: 4px 12px;
+    background: #DC0015;
+    color: #FFF;
+    border-radius: 0 0 3px 3px;
+    font-size: 14px;
   }
 
   .btn-form-submit:active {
@@ -214,10 +287,138 @@ section {
     box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
     border-radius: 6px;
   }
+}
 
 
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+ 
+  .btn-form-submit {
+    display: inline;
+    max-width: 992px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #004A80;
+    background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border-radius: 6px;
+    outline: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 180px;
+    height: 70px;
+    margin-left: 20px;
+  }
+  
+  .btn-form-submit:hover {
+    background: #F2DA56;
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border-radius: 6px;
+  
+  }
+  
+  .btn-form-submit:active {
+    background: #F6BC25;
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border-radius: 6px;
+  }
+  
+  .input-group.error>.form-email {
+    border: 3px solid #DC0015;
+    border-radius: 3px 3px 0 0 !important;
+  }
+  
+  .input-group.error>.form-phone {
+    border: 3px solid #DC0015;
+    border-radius: 3px 3px 0 0 !important;
+  }
+  
+  .input-group>.form-email {
+    width: 71%;
+    height: 70px;
+    background: #FFF;
+    box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 3px !important;
+    font-size: 22px;
+  }
+  
+  .input-group>.form-phone {
+    width: 71%;
+    height: 70px;
+    background: #FFF;
+    box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 3px !important;
+    font-size: 22px;
+  }
+  
+  .errorEmail {
+    display: none;
+  }
+  
+  .errorPhone {
+    display: none;
+  }
+  
+  .input-group.error .errorEmail {
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    margin: 0px;
+    padding: 4px 12px;
+    background: #DC0015;
+    color: #FFF;
+    border-radius: 0 0 3px 3px;
+    font-size: 16px;
+  }
+  
+  .input-group.error .errorPhone {
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    margin: 0px;
+    padding: 4px 12px;
+    background: #DC0015;
+    color: #FFF;
+    border-radius: 0 0 3px 3px;
+    font-size: 16px;
+  }
+  
+  .form-email::placeholder {
+    width: 100%;
+    color: #9B9B9B;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .form-phone::placeholder {
+    color: #9B9B9B;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .form-subtext {
+    display: inline;
+    font-size: 16px;
+    color: #FFF;
+    margin-right: 45px;
+    line-height: normal;
+  }
+  
+  .lock {
+    display: inline;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  
 
 }
+
+
 
 /* ************************************************************
 ***************************************************************
@@ -300,7 +501,6 @@ section {
 }
 
 
-
 /* ************************************************************
 ***************************************************************
 --- [SECTION] Above the Fold ---
@@ -317,8 +517,84 @@ section {
   margin: 0 auto;
 }
 
+.select {
+  float: left;
+  margin-right: 20px;
+  text-align: left;
+  display: inline;
+
+}
+
+.select>.text {
+  font-family: Lato;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: 400;
+
+}
+
+.buttons {
+  margin-bottom: 20px;
+  float: left;
+  text-align: center;
+  display: inline;
+
+}
+
+.buttons>.btn-email {
+  height: 35px;
+  width: 148px;
+  padding: 0px;
+  border: 3px solid #F6BC25;
+  background-color: #004A80;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-family: Lato;
+  font-size: 16px;
+  color: #F6BC25;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.buttons>.btn-email:hover {
+  font-family: Lato-Bold;
+  font-size: 16px;
+  border-radius: 6px 6px 6px 0 0 0 6px;
+  background-color: #F6BC25;
+  color: #004A80;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.buttons>.btn-phone {
+  display: inline-block;
+  height: 35px;
+  width: 148px;
+  padding: 0px;
+  border: 3px solid #F6BC25;
+  background-color: #004A80;
+  border-radius: 6px;
+  font-family: Lato;
+  font-size: 16px;
+  color: #F6BC25;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.buttons>.btn-phone:hover {
+  font-family: Lato-Bold;
+  font-size: 16px;
+  background-color: #F6BC25;
+  color: #004A80;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+
 /* ************************************************************
-***************************************************************
+***************************************************************2125561235
 --- [SECTION] Features Desktop ---
 ***************************************************************
 ************************************************************ */
@@ -358,7 +634,7 @@ section {
   line-height: 26px;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 767px) {
   .featuresMobile {
     display: none;
   }
@@ -388,7 +664,7 @@ section {
   }
 }
 
-@media(min-width: 768px) {
+@media(min-width: 767px) {
 
   .featuresMobile {
     display: none;
@@ -640,7 +916,21 @@ section {
   .search-again {
     padding: 40px 0;
   }
+
+  .input-group.error .errorEmail {
+    display: block;
+    position: relative;
+    bottom: 5px;
+    width: 100%;
+    padding: 4px 12px;
+    background: #DC0015;
+    color: #FFF;
+    border-radius: 0 0 3px 3px;
+    font-size: 14px;
+  }
 }
+
+
 
 /* ************************************************************
 ***************************************************************

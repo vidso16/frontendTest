@@ -23,6 +23,8 @@ $(document).ready(function () {
         $("#address").append("<p>" + retreivedObject.address + '</p>');
         $(".email").append("<p>" + retreivedObject.email + "</p>");
 
+        
+
         for (const phone_number in retreivedObject.phone_numbers) {
           phone = retreivedObject.phone_numbers[phone_number]
           formatted_phone = "(" + phone.substring(0, 3) + ") " + phone.substring(3, 6) + "-" + phone.substring(6, 10);
@@ -42,4 +44,7 @@ $(document).ready(function () {
       }
     }
   }
+  console.log(retreivedObject);
 });
+
+

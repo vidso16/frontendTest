@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
- <!--LOAD PAGE-->
+<!--LOAD PAGE-->
+
 <body onload="myFunction()" style="margin:0;">
   <section class="load">
     <nav class="navbar d-flex justify-content-between">
@@ -101,8 +102,8 @@
         </div>
         <form>
           <div class="input-group">
-            <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
-            <p class="error-msg">Please enter a valid email address</p>
+            <input class="form-email" type="text" name="email" placeholder="Enter an Email Address" />
+            <p class="errorEmail">Please enter a valid email address</p>
             <button id="btn-search" class="btn btn-form-submit text-uppercase" type="submit">Go!</button>
           </div>
         </form>
@@ -148,7 +149,7 @@
       document.getElementById("loaderFoot").style.display = "none";
       document.getElementById("loaderText").style.display = "none";
       document.getElementsByClassName("load").style.display = "none";
-    }
+    };
   </script>
 </body>
 
