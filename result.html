@@ -99,10 +99,20 @@
         <div class="headline text-white text-center">
           <h1 class="mb-3">Can't Find The Right Person?</h1>
           <h2 class="mb-4 mb-md-5"><strong>Try Again</strong> - Make a new search</h2>
+
+          <div class="select">
+            <p class="typeSearch">TYPE OF SEARCH:</p>
+          </div>
+          <div class="buttons">
+            <button class="btn-email"> EMAIL ADDRESS</button>
+            <button class="btn-phone"> PHONE NUMBER</button>
+          </div>
+
         </div>
         <form>
           <div class="input-group">
-            <input class="form-email" type="text" name="email" placeholder="Enter an Email Address" />
+            <input class="formEmail" type="text" placeholder="Enter an Email Address" />
+            <input class="formPhone" type="text" placeholder="Enter an Phone Number" style="display:none;" />
             <p class="errorEmail">Please enter a valid email address</p>
             <button id="btn-search" class="btn btn-form-submit text-uppercase" type="submit">Go!</button>
           </div>
@@ -150,6 +160,25 @@
       document.getElementById("loaderText").style.display = "none";
       document.getElementsByClassName("load").style.display = "none";
     };
+  </script>
+
+
+  <!--TYPE OF SEARCH-->
+  <script>
+
+    document.querySelector('.btn-email:nth-child(1)').addEventListener('click', () => {
+      document.querySelector('input[type=text]:nth-child(1)').style.display = 'block';
+      document.querySelector('input[type=text]:nth-child(2)').style.display = 'none';
+
+
+    });
+
+    document.querySelector('.btn-phone:nth-child(2)').addEventListener('click', () => {
+      document.querySelector('input[type=text]:nth-child(1)').style.display = 'none';
+      document.querySelector('input[type=text]:nth-child(2)').style.display = 'block';
+    });
+
+
   </script>
 </body>
 
